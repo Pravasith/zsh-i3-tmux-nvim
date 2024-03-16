@@ -68,7 +68,7 @@ vim.g.gruvbox_baby_transparent_mode = 1
 vim.cmd([[colorscheme gruvbox-baby]])
 
 function ShadeItUp(colorChoice)
-	local colors = { "github_light", "catppuccin", "gruvbox-baby" }
+	local colors = { "catppuccin", "github_light", "gruvbox-baby" }
 	local color = colors[colorChoice or 1]
 	print("Theme set to", color)
 
@@ -77,4 +77,3 @@ function ShadeItUp(colorChoice)
 end
 
 ShadeItUp()
-
