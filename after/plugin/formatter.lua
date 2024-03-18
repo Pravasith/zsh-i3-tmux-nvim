@@ -61,7 +61,7 @@ require("formatter").setup({
 		cmake = {
 			function()
 				return {
-					exe = "cmake-format",
+					exe = "cmakelang",
 					args = { "-" },
 					stdin = true,
 				}
