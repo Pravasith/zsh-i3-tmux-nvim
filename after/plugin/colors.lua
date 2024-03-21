@@ -46,6 +46,11 @@ require("catppuccin").setup({
 	},
 })
 
+-- GITHUB LIGHT
+require("github-theme").setup({
+	transparent_background = true, -- disables setting the background color.
+})
+
 -- GRUVBOX BABY
 -- Example config in Lua
 vim.g.gruvbox_baby_function_style = "NONE"
@@ -68,12 +73,24 @@ vim.g.gruvbox_baby_transparent_mode = 1
 vim.cmd([[colorscheme gruvbox-baby]])
 
 function ShadeItUp(colorChoice)
-	local colors = { "catppuccin", "github_light", "gruvbox-baby" }
+	local colors = { "catppuccin", "github_light_high_contrast", "gruvbox-baby" }
 	local color = colors[colorChoice or 1]
+
 	print("Theme set to", color)
 
 	-- setup must be called before loading
 	vim.cmd.colorscheme(color)
 end
 
-ShadeItUp()
+function SetTheme()
+	local current_time = tonumber(os.date("%H")) -- Format: Hour:Minute:Second
+
+	-- Time is less than 5 p.m.
+	if current_time < 17 then
+		ShadeItUp(2)
+	else
+		ShadeItUp(1)
+	end
+end
+
+SetTheme()
