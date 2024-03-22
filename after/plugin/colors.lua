@@ -48,7 +48,9 @@ require("catppuccin").setup({
 
 -- GITHUB LIGHT
 require("github-theme").setup({
-	transparent_background = true, -- disables setting the background color.
+	transparent = true, -- disables setting the background color.
+	-- options = {
+	-- },
 })
 
 -- GRUVBOX BABY
