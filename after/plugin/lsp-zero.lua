@@ -43,17 +43,17 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, bufopts)
 end)
 
-local lspconfig = require("lspconfig")
-lspconfig.clangd.setup({
-	cmd = { "clangd", "--compile-commands-dir=~/personal/opengl-experiments/build/linux" },
-	filetypes = { "c", "cpp", "objc", "objcpp" },
-	root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
-	settings = {
-		clangd = {
-			-- includeDirs = { "/path/to/your/include/folder" },
-		},
-	},
-})
+-- local lspconfig = require("lspconfig")
+-- lspconfig.clangd.setup({
+-- 	cmd = { "clangd", "--compile-commands-dir=~/personal/opengl-experiments/build/linux" },
+-- 	filetypes = { "c", "cpp", "objc", "objcpp" },
+-- 	root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+-- 	settings = {
+-- 		clangd = {
+-- 			includeDirs = { "~/personal/opengl-experiments/build/linux" },
+-- 		},
+-- 	},
+-- })
 
 -- to learn how to use mason.nvim with lsp-zero
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
