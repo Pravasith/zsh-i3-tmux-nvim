@@ -62,8 +62,8 @@ vim.g.gruvbox_baby_keyword_style = "italic"
 -- ColorGroup = {fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)"}
 -- See also :h highlight-guifg
 -- Example:
-vim.g.gruvbox_baby_highlights = { Normal = { fg = "#5da0c7", bg = "NONE", style = "underline" } }
--- vim.g.gruvbox_baby_highlights = { Normal = { fg = "#c76d5d", bg = "NONE", style = "underline" } }
+-- vim.g.gruvbox_baby_highlights = { Normal = { fg = "#5da0c7", bg = "NONE", style = "underline" } }
+vim.g.gruvbox_baby_highlights = { Normal = { fg = "#c76d5d", bg = "NONE", style = "underline" } }
 
 -- Enable telescope theme
 vim.g.gruvbox_baby_telescope_theme = 1
@@ -71,11 +71,40 @@ vim.g.gruvbox_baby_telescope_theme = 1
 -- Enable transparent mode
 vim.g.gruvbox_baby_transparent_mode = 1
 
+-- GRUVBOX (NOT GRUVBOX BABY)
+vim.o.background = "light"
+-- Default options:
+require("gruvbox").setup({
+	terminal_colors = true, -- add neovim terminal colors
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = true,
+		emphasis = true,
+		comments = true,
+		operators = false,
+		folds = true,
+	},
+	strikethrough = true,
+	invert_selection = false,
+	invert_signs = false,
+	invert_tabline = false,
+	invert_intend_guides = false,
+	inverse = true, -- invert background for search, diffs, statuslines and errors
+	contrast = "hard", -- can be "hard", "soft" or empty string
+	palette_overrides = {},
+	overrides = {},
+	dim_inactive = false,
+	transparent_mode = false,
+})
+-- vim.g.gruvbox_transparent_bg = 1
+
 -- Load the colorscheme
-vim.cmd([[colorscheme gruvbox-baby]])
+-- vim.cmd([[colorscheme gruvbox-baby]])
 
 function ShadeItUp(colorChoice)
-	local colors = { "catppuccin", "github_light_high_contrast", "gruvbox-baby" }
+	local colors = { "catppuccin", "gruvbox", "github_light_high_contrast", "gruvbox-baby" }
 	local color = colors[colorChoice or 1]
 
 	print("Theme set to", color)

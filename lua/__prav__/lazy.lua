@@ -50,6 +50,7 @@ require("lazy").setup({
 		"luisiacc/gruvbox-baby",
 		branch = "main",
 	},
+	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"VonHeikemen/lsp-zero.nvim",
