@@ -72,7 +72,7 @@ vim.g.gruvbox_baby_telescope_theme = 1
 vim.g.gruvbox_baby_transparent_mode = 1
 
 -- GRUVBOX (NOT GRUVBOX BABY)
-vim.o.background = "light"
+vim.o.background = "dark"
 -- Default options:
 require("gruvbox").setup({
 	terminal_colors = true, -- add neovim terminal colors
@@ -96,7 +96,7 @@ require("gruvbox").setup({
 	palette_overrides = {},
 	overrides = {},
 	dim_inactive = false,
-	transparent_mode = false,
+	transparent_mode = true,
 })
 -- vim.g.gruvbox_transparent_bg = 1
 
@@ -104,7 +104,7 @@ require("gruvbox").setup({
 -- vim.cmd([[colorscheme gruvbox-baby]])
 
 function ShadeItUp(colorChoice)
-	local colors = { "catppuccin", "gruvbox", "github_light_high_contrast", "gruvbox-baby" }
+	local colors = { "catppuccin", "github_light_high_contrast", "gruvbox", "gruvbox-baby" }
 	local color = colors[colorChoice or 1]
 
 	print("Theme set to", color)
