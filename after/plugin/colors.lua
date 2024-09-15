@@ -114,13 +114,13 @@ function ShadeItUp(colorChoice)
 end
 
 function SetTheme()
-	local current_time = tonumber(os.date("%H")) -- Format: Hour:Minute:Second
-
-	-- Time is less than 5 p.m.
-	if current_time < 17 then
-		ShadeItUp(2)
-	else
+	io.write("Which theme? Dark(d) or Light(l)?")
+	local answer = io.read()
+	answer = string.lower(answer or "d")
+	if answer == "d" then
 		ShadeItUp(1)
+	elseif answer == "l" then
+		ShadeItUp(2)
 	end
 end
 
