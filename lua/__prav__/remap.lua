@@ -25,6 +25,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>a", "<C-^>")
 
@@ -36,6 +37,11 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- COMMENTS
+vim.keymap.set({ "n", "v" }, "<C-_>", "gc", { remap = true })
+vim.keymap.set({ "n" }, "<C-_>", "gcc", { remap = true }) -- Use with leader n to comment n lines
+
+-- SOURCE
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)

@@ -39,14 +39,6 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"terrortylor/nvim-comment",
-		config = function()
-			require("nvim_comment").setup()
-			vim.api.nvim_set_keymap("n", "<C-_>", [[:CommentToggle<CR>]], { noremap = true, silent = true })
-			vim.api.nvim_set_keymap("x", "<C-_>", [[:CommentToggle<CR>]], { noremap = true, silent = true })
-		end,
-	},
-	{
 		"luisiacc/gruvbox-baby",
 		branch = "main",
 	},
