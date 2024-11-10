@@ -50,6 +50,13 @@ require("lazy").setup({
 		"luisiacc/gruvbox-baby",
 		branch = "main",
 	},
+	{
+		"water-sucks/darkrose.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	"tjdevries/colorbuddy.nvim",
+	"bartekprtc/gruv-vsassist.nvim",
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",

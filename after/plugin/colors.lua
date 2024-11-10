@@ -80,11 +80,16 @@ require("gruvbox").setup({
 	underline = true,
 	bold = true,
 	italic = {
-		strings = true,
-		emphasis = true,
-		comments = true,
+		-- strings = true,
+		-- emphasis = true,
+		-- comments = true,
+		-- operators = false,
+		-- folds = true,
+		strings = false,
+		emphasis = false,
+		comments = false,
 		operators = false,
-		folds = true,
+		folds = false,
 	},
 	strikethrough = true,
 	invert_selection = false,
@@ -92,20 +97,47 @@ require("gruvbox").setup({
 	invert_tabline = false,
 	invert_intend_guides = false,
 	inverse = true, -- invert background for search, diffs, statuslines and errors
-	contrast = "hard", -- can be "hard", "soft" or empty string
+	contrast = "soft", -- can be "hard", "soft" or empty string
 	palette_overrides = {},
 	overrides = {},
 	dim_inactive = false,
 	transparent_mode = true,
 })
+
 -- vim.g.gruvbox_transparent_bg = 1
 
 -- Load the colorscheme
 -- vim.cmd([[colorscheme gruvbox-baby]])
 
+require("gruv-vsassist").setup({
+	-- Enable transparent background
+	transparent = true,
+
+	-- Enable italic comment
+	italic_comments = false,
+
+	-- Disable nvim-tree background color
+	disable_nvimtree_bg = false,
+
+	-- Override colors (see ./lua/gruv-vsassist/colors.lua)
+	color_overrides = {
+		vscLineNumber = "#FFFFFF",
+	},
+})
+
 function ShadeItUp(colorChoice)
-	local colors = { "catppuccin", "github_light_high_contrast", "gruvbox", "gruvbox-baby" }
-	local color = colors[colorChoice or 1]
+	local dark_colors = {
+		"catppuccin",
+		"gruvbox",
+		"gruvbox-baby",
+		"darkrose",
+		"gruv-vsassist",
+		"colorbuddy",
+		-- "github_light_high_contrast",
+	}
+	-- local light_colors = { "github_light_high_contrast" }
+
+	local color = dark_colors[colorChoice or 1]
 
 	print("Theme set to", color)
 
@@ -115,10 +147,15 @@ end
 
 function SetTheme()
 	io.write("Which theme? Dark(d) or Light(l)?")
+
 	local answer = io.read()
 	answer = string.lower(answer or "d")
 	if answer == "d" then
-		ShadeItUp(1)
+		-- ShadeItUp(1) -- catppuccin
+		-- ShadeItUp(3) -- gruvbox
+		-- ShadeItUp(4) -- gruvbox-baby
+		ShadeItUp(5) -- darkrose
+		-- ShadeItUp(6) -- colorbuddy
 	elseif answer == "l" then
 		ShadeItUp(2)
 	end
