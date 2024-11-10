@@ -6,7 +6,7 @@
   "darkrose.nvim": { "branch": "main", "commit": "ce6ceb55332862e180264fa534d2ce4d70f02db2" },
   "formatter.nvim": { "branch": "master", "commit": "eb89a1f3e079f1b9680bc7293b75fffccb5e1598" },
   "github-nvim-theme": { "branch": "main", "commit": "0e4636f556880d13c00d8a8f686fae8df7c9845f" },
-  "gruv-vsassist.nvim": { "branch": "main", "commit": "15056d1257e991a88db14e0ce16b68a21caeb68c" },
+  "gruv-vsassist.nvim": { "branch": "main", "commit": "b5acfdb4eb16b7366acb869041a015c963c03608" },
   "gruvbox-baby": { "branch": "main", "commit": "bd52e62d8134647090108189e69c8b3cd18bdbbf" },
   "gruvbox.nvim": { "branch": "main", "commit": "49d9c0b150ba70efcd831ec7b3cb8ee740067045" },
   "lazy.nvim": { "branch": "main", "commit": "60cf258a9ae7fffe04bb31141141a91845158dcc" },

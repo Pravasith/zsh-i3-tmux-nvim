@@ -152,9 +152,10 @@ function SetTheme()
 	answer = string.lower(answer or "d")
 	if answer == "d" then
 		-- ShadeItUp(1) -- catppuccin
-		-- ShadeItUp(3) -- gruvbox
-		-- ShadeItUp(4) -- gruvbox-baby
-		ShadeItUp(5) -- darkrose
+		-- ShadeItUp(2) -- gruvbox
+		-- ShadeItUp(3) -- gruvbox-baby
+		-- ShadeItUp(4) -- darkrose
+		ShadeItUp(5) -- cherno's theme
 		-- ShadeItUp(6) -- colorbuddy
 	elseif answer == "l" then
 		ShadeItUp(2)
