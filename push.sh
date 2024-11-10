@@ -33,7 +33,7 @@ cp "$TMUX_SRC/.tmux.conf" "$TMUX_DEST/.tmux.conf"
 
 # COPY POLYBAR CONFIG FOLDER -----------------------
 POLYBAR_SRC="$HOME/.config/polybar"
-POLYBAR_DEST="$GLB_CONF_PATH/polybar"
+POLYBAR_DEST="$GLB_CONF_PATH"
 
 mkdir "$POLYBAR_DEST"
 cp -rf "$POLYBAR_SRC" "$POLYBAR_DEST"
