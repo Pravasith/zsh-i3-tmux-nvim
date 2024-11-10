@@ -1,6 +1,6 @@
 
 [colors]
-# primary = { background = "#000e1c" }
+primary = { background = "#000e1c" }
 
 [window]
 padding = { x = 5, y = 0 }
