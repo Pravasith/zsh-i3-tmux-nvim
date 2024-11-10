@@ -31,13 +31,13 @@ ZSH_THEME="robbyrussell"
 
 alias vim="nvim"
 alias py3="python3"
+alias theme="cd ~/.config/alacritty && ./change-theme.sh && cd -"
+alias vol="pavucontrol"
+alias files="caja"
 
 # Env Vars
 export VIM_HOME=~/.config/nvim
-export OPENGL_HOME=~/__work__/cpp_opengl
 export REPOS_HOME=~/repos
-export WINDOWS_BINARIES_HOME=~/windows_binaries
 
 plugins=( git zsh-syntax-highlighting zsh-autosuggestions )
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
