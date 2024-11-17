@@ -35,9 +35,10 @@ alias theme="cd ~/.config/alacritty && ./change-theme.sh && cd -"
 alias vol="pavucontrol"
 alias files="caja"
 
-# Env Vars
+# ENV VARS
 export VIM_HOME=~/.config/nvim
 export REPOS_HOME=~/repos
+export POPCORN=~/personal/Popcorn
 
 plugins=( git zsh-syntax-highlighting zsh-autosuggestions )
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

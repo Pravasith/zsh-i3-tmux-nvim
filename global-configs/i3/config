@@ -34,12 +34,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -190,10 +184,14 @@ bindsym --release $mod+Shift+s exec --no-startup-id scrot -s ~/Pictures/Screensh
 # Brightness
 # Increase brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-# Decrease brightness
-
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -205,8 +203,12 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # }
 
 # Remove window borders
-new_window none
-new_float none
+# new_window none
+# new_float none
+for_window [class=".*"] border pixel 0
+
+# Rotate windows
+# bindsym $mod+r layout toggle split
 
 # Padding top
 for_window [class=".*"] gap_top 10
