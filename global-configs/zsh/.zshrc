@@ -34,6 +34,7 @@ alias py3="python3"
 alias theme="cd ~/.config/alacritty && ./change-theme.sh && cd -"
 alias vol="pavucontrol"
 alias files="caja"
+alias horny="wine ~/Downloads/SummertimeSaga-0-20-16-pc/SummertimeSaga.exe"
 
 # ENV VARS
 export VIM_HOME=~/.config/nvim
