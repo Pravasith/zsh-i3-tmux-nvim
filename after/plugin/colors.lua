@@ -133,7 +133,7 @@ function ShadeItUp(colorChoice)
 		"darkrose",
 		"gruv-vsassist",
 		"colorbuddy",
-		-- "github_light_high_contrast",
+		"github_light_high_contrast",
 	}
 	-- local light_colors = { "github_light_high_contrast" }
 
@@ -151,12 +151,13 @@ function SetTheme()
 	local answer = io.read()
 	answer = string.lower(answer or "d")
 	if answer == "d" then
-		-- ShadeItUp(1) -- catppuccin
+		ShadeItUp(1) -- catppuccin
 		-- ShadeItUp(2) -- gruvbox
 		-- ShadeItUp(3) -- gruvbox-baby
 		-- ShadeItUp(4) -- darkrose
-		ShadeItUp(5) -- cherno's theme
+		-- ShadeItUp(5) -- cherno's theme
 		-- ShadeItUp(6) -- colorbuddy
+		-- ShadeItUp(7) -- github light
 	elseif answer == "l" then
 		ShadeItUp(2)
 	end

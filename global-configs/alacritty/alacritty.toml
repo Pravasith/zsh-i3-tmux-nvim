@@ -1,12 +1,12 @@
 
 [colors]
-primary = { background = "#000e1c" }
+# primary = { background = "#000e1c" }
+primary = { background = "#000000" }
 
 [window]
 padding = { x = 5, y = 0 }
 dynamic_padding = true
-opacity = 0.9
-
+opacity = 0.8
 
 [font]
 size = 9.5

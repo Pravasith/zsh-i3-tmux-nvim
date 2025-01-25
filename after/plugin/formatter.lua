@@ -1,6 +1,8 @@
 -- Utilities for creating configurations
 local util = require("formatter.util")
 
+local defaults = require("formatter.defaults")
+
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 --
 
@@ -107,6 +109,25 @@ require("formatter").setup({
 				}
 			end,
 		},
+
+		markdown = {
+			function()
+				return {
+					exe = "mdformat",
+					args = { "-" },
+					stdin = true,
+				}
+			end,
+		},
+
+		-- denofmt = {
+		-- 	function()
+		-- 		local denofmt = util.copyf(defaults.denofmt)()
+		-- 		table.insert(denofmt.args, "--ext")
+		-- 		table.insert(denofmt.args, "md")
+		-- 		return denofmt
+		-- 	end,
+		-- },
 
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
