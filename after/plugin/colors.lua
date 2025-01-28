@@ -151,11 +151,11 @@ function SetTheme()
 	local answer = io.read()
 	answer = string.lower(answer or "d")
 	if answer == "d" then
-		ShadeItUp(1) -- catppuccin
+		-- ShadeItUp(1) -- catppuccin
 		-- ShadeItUp(2) -- gruvbox
 		-- ShadeItUp(3) -- gruvbox-baby
 		-- ShadeItUp(4) -- darkrose
-		-- ShadeItUp(5) -- cherno's theme
+		ShadeItUp(5) -- cherno's theme
 		-- ShadeItUp(6) -- colorbuddy
 		-- ShadeItUp(7) -- github light
 	elseif answer == "l" then
