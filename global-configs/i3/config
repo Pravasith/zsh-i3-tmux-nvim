@@ -177,6 +177,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Lock screen
+bindsym $mod+Shift+m exec i3lock -c 000000
+
 # Screenshot with scrot
 bindsym --release $mod+Shift+s exec --no-startup-id scrot -s ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png
 # bindsym $mod+Shift+s exec --no-startup-id zsh -c "scrot -s ~/Pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
