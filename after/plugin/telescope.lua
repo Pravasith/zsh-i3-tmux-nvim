@@ -1,3 +1,9 @@
+require("telescope").setup({
+	defaults = {
+		path_display = { "truncate" }, -- Truncate long paths
+	},
+})
+
 local builtin = require("telescope.builtin")
 
 local flags = {
