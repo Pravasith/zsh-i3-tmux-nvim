@@ -3,14 +3,14 @@
 # primary = { background = "#000e1c" }
 
 [window]
-padding = { x = 10, y = 0 }
+padding = { x = 5, y = 0 }
 dynamic_padding = true
-opacity = 0.9
+opacity = 0.75
 # decorations = "None"
 
 
 [font]
-size = 13
+size = 9.5
 normal = { family = "MesloLGM Nerd Font" }
 
 [keyboard]

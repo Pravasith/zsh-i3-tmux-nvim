@@ -86,3 +86,13 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
 	}),
 })
+
+vim.diagnostic.config({
+	virtual_text = true, -- Shows error messages inline
+	signs = true, -- Shows the red/yellow icons in the sign column
+	underline = true, -- Underlines the error
+	update_in_insert = false,
+	severity_sort = true,
+})
+
+vim.o.signcolumn = "yes"

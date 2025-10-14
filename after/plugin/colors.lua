@@ -138,7 +138,6 @@ function ShadeItUp(colorChoice)
 	-- local light_colors = { "github_light_high_contrast" }
 
 	local color = dark_colors[colorChoice or 1]
-
 	print("Theme set to", color)
 
 	-- setup must be called before loading
@@ -155,11 +154,11 @@ function SetTheme()
 		-- ShadeItUp(2) -- gruvbox
 		-- ShadeItUp(3) -- gruvbox-baby
 		-- ShadeItUp(4) -- darkrose
-		ShadeItUp(5) -- cherno's theme
+		-- ShadeItUp(5) -- cherno's theme
 		-- ShadeItUp(6) -- colorbuddy
-		-- ShadeItUp(7) -- github light
-	elseif answer == "l" then
 		ShadeItUp(7) -- github light
+	elseif answer == "l" then
+		-- ShadeItUp(7) -- github light
 	end
 end
 

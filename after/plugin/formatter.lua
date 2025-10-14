@@ -90,6 +90,16 @@ require("formatter").setup({
 			end,
 		},
 
+		typescriptreact = {
+			function()
+				return {
+					exe = "prettierd",
+					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+					stdin = true,
+				}
+			end,
+		},
+
 		css = {
 			function()
 				return {
