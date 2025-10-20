@@ -6,6 +6,16 @@ local defaults = require("formatter.defaults")
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 --
 
+local prettierJsTsConf = function()
+	local filename = vim.api.nvim_buf_get_name(0)
+	filename = filename:gsub("%(", "\\("):gsub("%)", "\\)")
+	return {
+		exe = "prettier",
+		args = { "--stdin-filepath", filename },
+		stdin = true,
+	}
+end
+
 require("formatter").setup({
 	-- Enable or disable logging
 	logging = true,
@@ -17,7 +27,6 @@ require("formatter").setup({
 		-- and will be executed in order
 		-- typescript = { format_prettier },
 		-- javascript = { format_prettier },
-		-- typescriptreact = { format_prettier },
 		lua = {
 			-- "formatter.filetypes.lua" defines default configurations for the
 			-- "lua" filetype
@@ -71,39 +80,22 @@ require("formatter").setup({
 		},
 
 		javascript = {
-			function()
-				return {
-					exe = "prettierd",
-					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
-					stdin = true,
-				}
-			end,
+			prettierJsTsConf,
 		},
-
 		typescript = {
-			function()
-				return {
-					exe = "prettierd",
-					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
-					stdin = true,
-				}
-			end,
+			prettierJsTsConf,
 		},
-
 		typescriptreact = {
-			function()
-				return {
-					exe = "prettierd",
-					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
-					stdin = true,
-				}
-			end,
+			prettierJsTsConf,
+		},
+		javascriptreact = {
+			prettierJsTsConf,
 		},
 
 		css = {
 			function()
 				return {
-					exe = "prettierd",
+					exe = "prettier",
 					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
 					stdin = true,
 				}
@@ -113,7 +105,7 @@ require("formatter").setup({
 		html = {
 			function()
 				return {
-					exe = "prettierd",
+					exe = "prettier",
 					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
 					stdin = true,
 				}
