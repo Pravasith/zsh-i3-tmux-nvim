@@ -31,7 +31,7 @@ ZSH_THEME="robbyrussell"
 
 alias vim="nvim"
 alias py3="python3"
-alias theme="cd ~/.config/alacritty && ./change-theme.sh && cd -"
+alias theme="~/.config/alacritty/change-theme.sh"
 alias vol="pavucontrol"
 alias files="caja"
 alias horny="wine ~/Downloads/SummertimeSaga-0-20-16-pc/SummertimeSaga.exe"

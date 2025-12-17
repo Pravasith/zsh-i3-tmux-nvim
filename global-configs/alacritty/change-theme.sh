@@ -7,17 +7,17 @@ read -p "'D' for dark theme, 'L' for light theme. Enter: " theme
 
 # Convert the input to lowercase for case-insensitive comparison
 theme=$(echo "$theme" | tr '[:upper:]' '[:lower:]')
-src_dir=$PWD
+src_dir="$HOME/.config/alacritty"
 
 # Check the user input and print a message accordingly
 if [ "$theme" = "d" ]; then
     echo "Applying dark theme..."
-    cp dark.toml alacritty.toml
+    cp "$src_dir/dark.toml" "$src_dir/alacritty.toml"
     echo "Applied dark theme"
 
 elif [ "$theme" = "l" ]; then
     echo "Applying light theme..."
-    cp light.toml alacritty.toml
+    cp "$src_dir/light.toml" "$src_dir/alacritty.toml"
     echo "Applied light theme"
 
 else
