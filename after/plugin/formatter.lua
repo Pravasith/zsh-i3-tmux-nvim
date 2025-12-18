@@ -116,7 +116,11 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "mdformat",
-					args = { "-" },
+					args = {
+						"--wrap",
+						"80",
+						"-",
+					},
 					stdin = true,
 				}
 			end,
