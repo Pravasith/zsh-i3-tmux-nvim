@@ -1,13 +1,13 @@
 
 [colors]
 # primary = { background = "#000e1c" }
-# primary = { background = "#28283c" }
-primary = { background = "#000000" }
 
 [window]
 padding = { x = 5, y = 0 }
 dynamic_padding = true
-opacity = 0.825
+opacity = 0.75
+# decorations = "None"
+
 
 [font]
 size = 9.5
@@ -20,9 +20,9 @@ bindings = [
 ]
 
 [terminal]
+# osc52 = "CopyPaste"
 
 [general]
 import = [
-    "~/.config/alacritty/alacritty-theme/themes/nord.toml"
+    "~/.config/alacritty/alacritty-theme/themes/papertheme.toml"
 ]
-# osc52 = "CopyPaste"
