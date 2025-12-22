@@ -58,6 +58,12 @@ require("lazy").setup({
 	"hrsh7th/nvim-cmp",
 	"L3MON4D3/LuaSnip",
 	"projekt0n/github-nvim-theme",
+	-- "NLKNguyen/papercolor-theme",
 	"mhartington/formatter.nvim",
 	"nvim-tree/nvim-tree.lua",
+	{
+		"yorik1984/newpaper.nvim",
+		priority = 1000,
+		config = true,
+	},
 }, {})

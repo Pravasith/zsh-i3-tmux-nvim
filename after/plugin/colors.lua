@@ -44,7 +44,17 @@ local function setup_before_colorscheme(theme)
 		require("github-theme").setup({
 			options = { transparent = true },
 		})
-	elseif theme == "" then
+	elseif theme == "newpaper" then
+		-- print("HELLO")
+		require("newpaper").setup({
+			style = "light",
+			terminal = "bg",
+			contrast_float = false,
+			contrast_telescope = false,
+			disable_background = true,
+			borders = false,
+			italic_strings = false,
+		})
 	end
 end
 
@@ -70,9 +80,10 @@ function ShadeItUp(colorChoice)
 		"gruv-vsassist",
 		"colorbuddy",
 		"github_light_high_contrast",
+		"newpaper",
 	}
 
-	local theme = themes[colorChoice or 1]
+	local theme = themes[colorChoice or 8]
 
 	setup_before_colorscheme(theme)
 	vim.cmd.colorscheme(theme)
@@ -81,10 +92,12 @@ function ShadeItUp(colorChoice)
 	print("Theme set to", theme)
 end
 
-function SetTheme()
-	vim.api.nvim_create_user_command("Theme", function(opts)
-		ShadeItUp(tonumber(opts.args) or 1)
-	end, { nargs = "?" })
-end
+ShadeItUp(8)
 
-SetTheme()
+-- function SetTheme()
+-- 	vim.api.nvim_create_user_command("Theme", function(opts)
+-- 		ShadeItUp(tonumber(opts.args) or 8)
+-- 	end, { nargs = "?" })
+-- end
+
+-- SetTheme()
