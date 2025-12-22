@@ -45,15 +45,18 @@ local function setup_before_colorscheme(theme)
 			options = { transparent = true },
 		})
 	elseif theme == "newpaper" then
-		-- print("HELLO")
+		print("HELLO")
 		require("newpaper").setup({
 			style = "light",
 			terminal = "bg",
 			contrast_float = false,
 			contrast_telescope = false,
 			disable_background = true,
+			-- greyscale = "average",
 			borders = false,
 			italic_strings = false,
+			lsp_virtual_text_bg = false,
+			editor_better_view = false,
 		})
 	end
 end
